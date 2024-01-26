@@ -1,131 +1,44 @@
-# Demo服务实例部署文档
+Palworld is a new survival game developed by Pocketpair. The game became extremely popular overnight, hitting 2 million concurrent players. However, Pocketpair's servers are struggling to keep up with the large number of players. To solve this issue, Pocketpair allows players to set up dedicated servers, which offers the following advantages:
 
-## 概述
+(1) greater stability to reduce the risk of crashes or downtime;
+(2) easy adjustment of the server player count to 4, 12, or 32 players; 
+(3) control over server settings to allow for customization of gameplay elements, rules, and mods, creating a tailored experience for the gaming community.
 
-`(服务概述内容)`。
+This topic describes how to establish a dedicated server for Palworld in Alibaba Cloud with a few clicks. You only need to configure the settings on the page as prompted. Then, the system will automatically create an ECS instance, configure the port and firewall, and install the game environment. The whole process takes only 2 to 3 minutes with no coding involved.
 
-```
-eg：
-
-Demo服务是计算巢提供的示例。
-本文向您介绍如何开通计算巢上的`Demo`服务，以及部署流程和使用说明。
-```
-
-## 计费说明
-
-`(计费说明内容)`
-
-```
-eg:
-
-Demo在计算巢上的费用主要涉及：
-
-- 所选vCPU与内存规格
-- 系统盘类型及容量
-- 公网带宽
-
-计费方式包括：
-
-- 按量付费（小时）
-- 包年包月
-
-目前提供如下实例：
-
-| 规格族 | vCPU与内存 | 系统盘 | 公网带宽 |
-| --- | --- | --- | --- |
-| ecs.r6.xlarge | 内存型r6，4vCPU 32GiB | ESSD云盘 200GiB PL0 | 固定带宽1Mbps |
-
-预估费用在创建实例时可实时看到。
-如需更多规格、其他服务（如集群高可用性要求、企业级支持服务等），请联系我们 [mailto:xx@xx.com](mailto:xx@xx.com)。
-
-```
-
-## 部署架构
-
-`(部署概述内容)`
-
-## RAM账号所需权限
-
-`(权限策略内容)`
-
-```
-eg: 
-
-Demo服务需要对ECS、VPC等资源进行访问和创建操作，若您使用RAM用户创建服务实例，需要在创建服务实例前，对使用的RAM用户的账号添加相应资源的权限。添加RAM权限的详细操作，请参见[为RAM用户授权](https://help.aliyun.com/document_detail/121945.html)。所需权限如下表所示。
-
-
-| 权限策略名称 | 备注 |
-| --- | --- |
-| AliyunECSFullAccess | 管理云服务器服务（ECS）的权限 |
-
-```
-
-## 部署流程
-
-### 部署步骤
-
-`(部署步骤内容)`
-
-```
-eg:
-
-1. 单击部署链接，进入服务实例部署界面，根据界面提示，填写参数完成部署。
-2. 补充示意图。
-```
-### 部署参数说明
-
-`(部署参数说明内容)`
-
-```
-eg:
-
-您在创建服务实例的过程中，需要配置服务实例信息。下文介绍云XR实时渲染平台服务实例输入参数的详细信息。
-
-| 参数组 | 参数项 | 示例 | 说明 |
-| --- | --- | --- | --- |
-| 服务实例名称 |  | test | 实例的名称 |
-| 地域 |  | 华北2（北京） | 选中服务实例的地域，建议就近选中，以获取更好的网络延时。 |
-```
-
-### 验证结果
-
-`(验证结果内容)`
-
-```
-eg:
-
-1. 查看服务实例。服务实例创建成功后，部署时间大约需要2分钟。部署完成后，页面上可以看到对应的服务实例。 
-2. 通过服务实例访问TuGraph。进入到对应的服务实例后，可以在页面上获取到web、rpc、ssh共3种使用方式。
-```
-
-### 使用Demo
-
-`(服务使用说明内容)`
-
-```
-eg:
-
-请访问Demo官网了解如何使用：[使用文档](https://www.aliyun.com)
-```
-
-## 问题排查
-
-`(服务使用说明内容)`
-
-```
-eg:
-
-请访问[Demo的问题排查链接](https://www.aliyun.com)获取帮助。
-```
-
-## 联系我们
-
-欢迎访问Demo官网（[https://www.aliyun.com](https://www.aliyun.com)）了解更多信息。
-
-联系邮箱：[https://www.aliyun.com](mailto:https://www.aliyun.com)
-
-社区版开源地址：[https://github.com/](https://github.com/)
-
-扫码关注微信公众号，技术博客、活动通知不容错过：
-
-`(添加二维码图片)`
+# Create an ECS instance
+## Step 1: Go to the Palworld multiplayer server introduction page
+(1) Log on to the Alibaba Cloud International site (alibabacloud.com). 
+(2) Visit the Palworld multiplayer server introduction page at https://developer.aliyun.com/topic/ecs/huanshou and click Deploy Now on the right side.
+![image](https://yqintl.alicdn.com/013f2f1ff7f585aab3a9dcf94a657be1ffd65ffd.png)
+Most required settings, including the network protocol and port (UDP protocol and port 8211), are pre-configured.
+## Step 2: Configure the ECS instance
+On the Create Service Instance page, configure the following parameters:
+(1) **Service Instance Name**: Enter the instance name. We recommend that you use the default name.
+(2) **Region**: Select the region where you want to deploy the ECS instance. We recommend that you use the default value, which is the city closest to you.
+(3) **Pay Period Unit and Period**: Select a subscription duration for the ECS instance. We recommend that you specify three months as the subscription duration.
+(4) **Select the ECS instance specifications**. Higher specifications result in a smoother gaming experience. Palworld is a memory-intensive game. We recommend that you specify 4vCPU 16GiB or higher specifications for your ECS instance. 4vCPU 16GiB is recommenced by Pocketpair, developer of the game. For more information, visit https://tech.palworldgame.com/dedicated-server-guide. We recommend that you set the **Internet Charge Type** parameter to **Pay-by-bandwidth**. The pay-by-bandwidth metering method does not impose limits on the bandwidth, which reduces latency and provides a better gaming experience.
+![image](https://yqintl.alicdn.com/a63c0b2e6d6fd973a1c1a7a4cfb9c8777c60e21a.png)
+(5) **Instance Password**: Enter a password for the ECS instance. The password is required when you log on to the ECS instance.
+(6) **Availability Zone**: Select the zone in which the ECS instance resides. We recommend that you use the default zone.
+After you complete the configurations, click Next: Confirm Order to submit the order.
+## Step 3: Purchase the service
+In the Terms of Service section, read and select the check box to agree to the terms of service and then click Create Now to complete the payment.
+![image](https://yqintl.alicdn.com/34c26339a349a6a9014ebc0f2c69de214c83f440.png)
+If the Submitted message appears, it indicates that the ECS instance was created successfully. You can click View Service to view the instance.
+![image](https://yqintl.alicdn.com/224fa8750b59c5e3c959910c04cecd020bc7a1eb.png)
+![image](https://yqintl.alicdn.com/68367bea7fcc29ee4a157baf50e47842c2161b09.png)
+## Step 4: Obtain the IP address of the ECS instance
+The ECS instance can be created in less than a minute. When the status of the instance changes to **Deployed**, click the ID of the instance to go to the instance details page.
+In this step, the Palworld server installation program is preloaded in the image of the ECS instance that you created.
+![image](https://yqintl.alicdn.com/b4ee975799d37bb962ea76883edccdfd04966a7f.png)
+On the Overview tab, the IP address of the ECS instance is displayed in the Service Addresses field, which will be used for subsequent configuration
+![image](https://yqintl.alicdn.com/3718beafdf8a5e9fa6ef6afa20cb2aec5b31e2e9.png)
+# Start a multiplayer game
+(1) Launch Palworld and select Join Multiplayer Game from the main menu.
+![image](https://yqintl.alicdn.com/b9d4c06ec0f815e26b33c849086ba24654b75cf4.png)
+Enter the IP address obtained in Sub-step 4 of Step 1 in the text box at the bottom of the page and click **Connect**.
+![image](https://yqintl.alicdn.com/e0381ce945286da7507118997bf4c1abe395223f.png)
+You are now ready to play!
+![image](https://yqintl.alicdn.com/dde619ca572e82d11b10545c730139dd919a2c24.png)
+An out-of-memory issue may occur during the running of the game. A quick solution to mitigate the impact of this issue is to regularly restart your server. We recommend that you create a scheduled task in the Alibaba Cloud Manage Console to automatically restart your ECS instance during off-peak hours.
