@@ -37,7 +37,7 @@ After you complete the configurations, click Next: Confirm Order to submit the o
 ## Step 3: Purchase the service
 In the Terms of Service section, read and select the check box to agree to the terms of service and then click Create Now to create an order.
 
-![image](3-1.png)
+![image](3-1.jpg)
 
 If the Submitted message appears, it indicates that the order was created successfully. You can click View Service to view the instance.
 
@@ -45,7 +45,7 @@ If the Submitted message appears, it indicates that the order was created succes
 
 If you create a subscription-type order, you'll find an unpaid instance, click "Complete Payment" and finish the payment, the instance will be deployed immediately.
 
-![image](4-1.png)
+![image](4-1.jpg)
 
 ![image](5.png)
 
