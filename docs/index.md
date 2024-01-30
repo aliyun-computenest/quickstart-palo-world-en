@@ -66,7 +66,7 @@ On the Overview tab, the IP address of the ECS instance is displayed in the Serv
 
 Enter the IP address obtained in Sub-step 4 of Step 1 in the text box at the bottom of the page and click **Connect**.
 
-![image](12.jpg)
+![image](10.jpg)
 
 You are now ready to play!
 
