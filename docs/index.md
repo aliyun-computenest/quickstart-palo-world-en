@@ -62,11 +62,11 @@ On the Overview tab, the IP address of the ECS instance is displayed in the Serv
 # Start a multiplayer game
 (1) Launch Palworld and select Join Multiplayer Game from the main menu.
 
-![image](10.png)
+![image](11.jpg)
 
 Enter the IP address obtained in Sub-step 4 of Step 1 in the text box at the bottom of the page and click **Connect**.
 
-![image](11.png)
+![image](12.jpg)
 
 You are now ready to play!
 
