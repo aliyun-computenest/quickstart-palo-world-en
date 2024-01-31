@@ -13,7 +13,7 @@ This topic describes how to establish a dedicated server for Palworld in Alibaba
 
 (1) Log on to the Alibaba Cloud International site [alibabacloud.com](https://www.alibabacloud.com). 
 
-(2) Visit the "[Rapid deployment of Palworld online services](https://computenest.console.aliyun.com/service/detail/ap-southeast-1/service-1cdad6b8bab640d4bf55/8?type=user&isRecommend=true)" page  and click Launch Now.
+(2) Visit the "[Rapid deployment of Palworld online services](https://computenest.console.aliyun.com/service/instance/create/ap-southeast-1?type=user&ServiceId=service-1cdad6b8bab640d4bf55)" page  and click Launch Now.
 
 ![image](1.png)
 
